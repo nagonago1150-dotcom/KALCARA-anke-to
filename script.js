@@ -35,12 +35,28 @@ class KalcalaSurvey {
         
         this.currentQuestionIndex = 0;
         this.answers = {};
-        
+
         this.init();
     }
-    
+
+    // パス別リダイレクトURL設定
+    getRedirectUrl() {
+        const path = window.location.pathname;
+        const redirectUrls = {
+            '/1': 'https://sf-system.jp/link.php?i=pi41sh02hwpy&m=mi41ruivpeep',
+            '/2': 'https://sf-system.jp/link.php?i=pi41sh02hwpy&m=mi4e9lzv5vxl'
+        };
+
+        const finalUrl = redirectUrls[path] || 'https://shop.sain-clarte.com/kalcala/15_nensyo2_mu_ka.lp_ishi/sp.html';
+        console.log('Current path:', path);
+        console.log('Redirect URL:', finalUrl);
+
+        // パスに対応するURLがあれば返す、なければデフォルトURL
+        return finalUrl;
+    }
+
     init() {
-        
+
     }
     
     showQuestion(questionIndex) {
@@ -101,7 +117,7 @@ class KalcalaSurvey {
         
         // 2秒後に外部LPに遷移
         setTimeout(() => {
-            window.location.href = 'https://shop.sain-clarte.com/kalcala/15_nensyo2_mu_ka.lp_ishi/sp.html';
+            window.location.href = this.getRedirectUrl();
         }, 2000);
     }
 }
