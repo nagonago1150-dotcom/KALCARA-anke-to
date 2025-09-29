@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALCALA - あなたの健康をサポート</title>
+    <!-- Updated for Vercel deployment -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pr-notice" style="background: #f8f9fa; padding: 8px 0; text-align: center; border-bottom: 1px solid #ddd; font-size: 14px; color: #666;">
+        PR：サン・クラルテ製薬
+    </div>
+    <header class="hero-header">
+        <div class="botanical-background">
+            <div class="botanical-pattern"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="brand-section">
+                <div class="botanical-frame">
+                    <h1>KALCALA</h1>
+                    <p class="subtitle">むくみ・冷え・お腹の脂肪にアプローチ</p>
+                    <div class="product-features">
+                        <div class="feature-badge">3つの機能性関与成分配合</div>
+                        <div class="feature-badge">92.9%医師推奨</div>
+                        <div class="feature-badge">機能性表示食品</div>
+                    </div>
+                    <div class="hero-disclaimer">
+                        <p class="hero-disclaimer-text">株式会社サン・クラルテ製薬の「KALCALA」について、医師56名を対象としたアンケートを実施しました。その結果、「KALCALAを続けることをおすすめしますか？」という質問に対し、92.9％（56名中52名）が勧めたい（前述の質問に対し、とてもそう思う、そう思う、ややそう思うと回答した医師の割合）と回答しております。（2023年11～12月：Dr's Review事務局調べ）※なお、本アンケートは商品使用者個人の感想であり、効果効能を保証/標榜するものではありません。</p>
+                    </div>
+                    <div class="hero-image-section">
+                        <img src="hero-main-image.jpg" alt="KALCALA特別キャンペーン" class="hero-promo-image">
+                    </div>
+                    <div class="hero-cta-section">
+                        <button class="hero-consultation-btn" id="hero-consultation-trigger">まずは相談してみる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>健康的な毎日をKALCALAと一緒に</h2>
+                <p>お腹の脂肪、むくみ、冷えなど、様々なお悩みにアプローチ</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h3>3つの機能性関与成分</h3>
+                <div class="feature-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="black-ginger">
+                            <span class="tab-icon">🫚</span>
+                            ブラックジンジャー
+                        </button>
+                        <button class="tab-button" data-tab="piperine">
+                            <span class="tab-icon">🌿</span>
+                            ヒハツ由来ピペリン
+                        </button>
+                        <button class="tab-button" data-tab="doctor">
+                            <span class="tab-icon">👨‍⚕️</span>
+                            医師推奨
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="black-ginger">
+                            <div class="feature-detail">
+                                <div class="feature-visual">
+                                    <div class="ingredient-circle">
+                                        <img src="black-ginger.jpg" alt="ブラックジンジャー" class="ingredient-image">
+                                    </div>
+                                    <div class="progress-ring">
+                                        <svg width="120" height="120">
+                                            <circle cx="60" cy="60" r="50" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+                                            <circle cx="60" cy="60" r="50" stroke="#DAA520" stroke-width="4" fill="none" 
+                                                    stroke-dasharray="314" stroke-dashoffset="157" class="progress-circle"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="feature-info">
+                                    <h4>ブラックジンジャー由来ポリメトキシフラボン</h4>
+                                    <div class="benefit-list">
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>BMIが高めの方の脂肪燃焼をサポート</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>お腹周りの脂肪を効率的に減少 ※BMI高めの方</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>基礎代謝の向上をサポート</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="piperine">
+                            <div class="feature-detail">
+                                <div class="feature-visual">
+                                    <div class="ingredient-circle">
+                                        <img src="piperine.jpg" alt="ヒハツ由来ピペリン" class="ingredient-image">
+                                    </div>
+                                    <div class="progress-ring">
+                                        <svg width="120" height="120">
+                                            <circle cx="60" cy="60" r="50" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+                                            <circle cx="60" cy="60" r="50" stroke="#DAA520" stroke-width="4" fill="none" 
+                                                    stroke-dasharray="314" stroke-dashoffset="94" class="progress-circle"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="feature-info">
+                                    <h4>ヒハツ由来ピペリン</h4>
+                                    <div class="benefit-list">
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>夕方の脚のむくみを軽減</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>末梢血流量を増加させる</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>冷えの軽減をサポート ※冷えによる末梢(手)の皮膚表面温度の低下</span>
+                                        </div>
+                                    </div>
+                                    <p class="benefit-note">※病的ではない一過性のむくみ</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="doctor">
+                            <div class="feature-detail">
+                                <div class="feature-info">
+                                    <h4>現役医師による推奨</h4>
+                                    <div class="benefit-list">
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>92.9%の医師が継続を勧めたい</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>科学的根拠に基づいた成分配合</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">✓</span>
+                                            <span>安全性と効果の両立を実現</span>
+                                        </div>
+                                    </div>
+                                    <p class="benefit-note">株式会社サン・クラルテ製薬の「KALCALA」について、医師56名を対象としたアンケートを実施しました。その結果、「KALCALAを続けることをおすすめしますか？」という質問に対し、92.9％（56名中52名）が勧めたい（前述の質問に対し、とてもそう思う、そう思う、ややそう思うと回答した医師の割合）と回答しております。（2023年11～12月：Dr's Review事務局調べ）※なお、本アンケートは商品使用者個人の感想であり、効果効能を保証/標榜するものではありません。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="container">
+                <h3>KALCALAで期待できる効果</h3>
+                <div class="benefits-container">
+                    <div class="main-benefit">
+                        <div class="benefit-visual">
+                            <div class="concern-illustration">
+                                <div class="concern-icon">
+                                    <img src="swollen-legs.jpg" alt="むくみのお悩み" class="concern-image">
+                                </div>
+                                <h4>こんなお悩みありませんか？</h4>
+                                <div class="concern-list">
+                                    <div class="concern-item">
+                                        <span class="concern-dot"></span>
+                                        <span>夕方になると脚がパンパン</span>
+                                    </div>
+                                    <div class="concern-item">
+                                        <span class="concern-dot"></span>
+                                        <span>靴下の跡がくっきり残る</span>
+                                    </div>
+                                    <div class="concern-item">
+                                        <span class="concern-dot"></span>
+                                        <span>お腹周りの脂肪が気になる</span>
+                                    </div>
+                                    <div class="concern-item">
+                                        <span class="concern-dot"></span>
+                                        <span>手足の冷えがつらい</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="arrow-container">
+                                <div class="transform-arrow">
+                                    <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 20H50M50 20L35 5M50 20L35 35" stroke="#DAA520" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="kalcala-badge">
+                                    <span>KALCALA</span>
+                                    <small>機能性関与成分配合</small>
+                                </div>
+                            </div>
+                            
+                            <div class="solution-illustration">
+                                <div class="solution-icon">
+                                    <img src="kalcala-package.jpg" alt="KALCALA商品" class="solution-image">
+                                </div>
+                                <h4>KALCALAでサポート</h4>
+                                <div class="solution-list">
+                                    <div class="solution-item">
+                                        <span class="solution-check">✓</span>
+                                        <span>夕方の脚のむくみを軽減</span>
+                                    </div>
+                                    <div class="solution-item">
+                                        <span class="solution-check">✓</span>
+                                        <span>お腹の脂肪を減らすのを助ける ※BMI高めの方</span>
+                                    </div>
+                                    <div class="solution-item">
+                                        <span class="solution-check">✓</span>
+                                        <span>末梢血流量を増加</span>
+                                    </div>
+                                    <div class="solution-item">
+                                        <span class="solution-check">✓</span>
+                                        <span>冷えの軽減をサポート ※冷えによる末梢(手)の皮膚表面温度の低下</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="scientific-evidence">
+                        <h4>科学的根拠に基づく効果</h4>
+                        <div class="evidence-grid">
+                            <div class="evidence-item">
+                                <div class="evidence-number">-17cm²</div>
+                                <div class="evidence-label">脂肪減少</div>
+                                <div class="evidence-description">ブラックジンジャー由来成分による</div>
+                            </div>
+                            <div class="evidence-item">
+                                <div class="evidence-number">44%</div>
+                                <div class="evidence-label">むくみ軽減</div>
+                                <div class="evidence-description">ヒハツ由来ピペリンによる</div>
+                            </div>
+                        </div>
+                        <p class="evidence-note">※BMI高めの方。関与成分の効果　※病的ではない一過性のむくみ　※非摂取群の変化量に対する摂取群の変化量の割合から算出　※個人差があります</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h3>今なら初回特別価格</h3>
+                <div class="price">
+                    <span class="price-main">500円</span>
+                    <span class="price-sub">（税込・送料無料）</span>
+                </div>
+                <div class="price-details">
+                    <p class="discount-rate">初回のみ約83％OFF</p>
+                    <p class="continuing-discount">2回目以降も約23％OFF</p>
+                    <p class="guarantee">30日間全額返金保証付き</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="https://shop.sain-clarte.com/kalcala/15_nensyo2_mu_ka.lp_ishi/sp.html" class="cta-button primary" target="_blank">今すぐお得に始める！</a>
+                    <button class="cta-button consultation" id="consultation-trigger">まずは相談してみる</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <span>KALCALA相談チャット</span>
+            <button id="chatbot-close">×</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <div id="chatbot-options"></div>
+    </div>
+
+    <div id="chatbot-trigger">💬</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
